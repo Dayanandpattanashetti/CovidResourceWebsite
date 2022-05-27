@@ -1,0 +1,52 @@
+<div class="row mb-3">
+  <div class="col-6">
+    <h4>You Are Here For A Good Cause</h4>
+  </div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/addhospital" type="button" class="btn btn-primary align-self-center">+ Add Hospital</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-10 col-sm-12">
+       <table class = "table table-bordered">
+  <thead class = "thead-dark">
+    <tr>
+      {{!-- <th scope="col">Id</th> --}}
+      <th scope="col">Pincode</th>
+      <th scope="col">State</th>
+      <th scope="col">District</th>
+      <th scope="col">Hospital</th>
+      <th scope="col">Total Oxygen Beds</th>
+      <th scope="col">Total Remdesivirs</th>
+      <th scope="col" class="text-center">update</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    {{#each rows}}
+    <tr>
+      {{!-- <th scope="row">{{this.id}}</th> --}}
+      <td>{{this.pincode}}</td>
+      <td>{{this.state}}</td>
+      <td>{{this.district}}</td>
+      <td>{{this.hospital}}</td>
+      <td>{{this.beds}}</td>
+      <td>{{this.oxygentanks}}</td>
+      <td class="text-center">
+        <a href="/update/{{this.id}}" type="button" class="btn btn-small"><i class="bi bi-pencil"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
